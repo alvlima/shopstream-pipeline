@@ -1,0 +1,17 @@
+kafka:
+  bootstrap_servers: ["localhost:9092"]
+  topics:
+    input: "clickstream-events"
+    alerts: "fraud-alerts"
+
+redis:
+  host: "localhost"
+  port: 6379
+
+processing:
+  session_timeout_minutes: 30
+  
+anomaly_detection:
+  thresholds:
+    events_per_minute: 100
+    unique_ips_per_user: 5
